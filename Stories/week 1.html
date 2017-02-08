@@ -1,0 +1,39 @@
+<tw-storydata name="week 1" startnode="1" creator="Twine" creator-version="2.0.10" ifid="573631B4-EA72-4D6B-99BC-86FCD5B7EB7F" format="SugarCube" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+	
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="StoryInit" tags="" position="592,167">&lt;&lt;set $day to 1&gt;&gt;
+&lt;&lt;set $actionsLeft to 3&gt;&gt;
+
+[[Go to room|My Room]]</tw-passagedata>
+<tw-passagedata pid="2" name="My Room" tags="" position="429.0001,338">It&#39;s Day $day.
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $day is 1&gt;&gt;
+It&#39;s sunny
+&lt;&lt;elseif $day is 2&gt;&gt;
+It&#39;s rainy
+&lt;&lt;else&gt;&gt;
+I have to pay my bills.
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;if $actionsLeft &gt; 0&gt;&gt;
+	&lt;&lt;link &quot;Pay Your Bills&quot;&gt;&gt;
+	&lt;&lt;set $actionsLeft to $actionsLeft - 1&gt;&gt;
+	&lt;&lt;/link&gt;&gt;
+	&lt;&lt;link &quot;brush your teeth&quot;&gt;&gt;
+	&lt;&lt;set $actionsLeft to $actionsLeft - 1&gt;&gt;
+
+/* run this code whenever player clicks &quot;Sleep&quot;*\
+
+&lt;&lt;link &quot;Sleep&quot;&gt;&gt; 
+&lt;&lt;set $day to $day +1&gt;&gt;
+&lt;&lt;set $actionsLeft to 3&gt;&gt;
+&lt;&lt;goto &quot;My Room&quot;&gt;&gt;
+
+
+&lt;&lt;/link&gt;&gt;</tw-passagedata>
+<tw-passagedata pid="3" name="Untitled Passage" tags="" position="607,293">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="4" name="Untitled Passage 1" tags="" position="459,213">Double-click this passage to edit it.</tw-passagedata>
+</tw-storydata>
